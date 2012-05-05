@@ -1,0 +1,36 @@
+<!--
+  ~ This file is part of websocktets-gl - simple WebSocket example
+  ~ Copyright (C) 2012  Burt Parkers
+  ~
+  ~ This program is free software: you can redistribute it and/or modify
+  ~ it under the terms of the GNU General Public License as published by
+  ~ the Free Software Foundation, either version 3 of the License, or
+  ~ (at your option) any later version.
+  ~
+  ~ This program is distributed in the hope that it will be useful,
+  ~ but WITHOUT ANY WARRANTY; without even the implied warranty of
+  ~ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  ~ GNU General Public License for more details.
+  ~
+  ~ You should have received a copy of the GNU General Public License
+  ~ along with this program.  If not, see <http://www.gnu.org/licenses/>.
+  -->
+
+<html>
+    <head>
+        <script type="text/javascript" charset="utf-8" src="js/jquery-1.7.2.min.js"></script>
+        <script type="text/javascript" charset="utf-8" src="js/echo.js"></script>
+    </head>
+    <body>
+        <h2>Simple Websocket Echo Service</h2>
+        <form id="messageFormId" name="messageForm" action="">
+            <label for="echoMessageId">Echo Message</label><br>
+            <input name="echoMessage" type="text" id="echoMessageId" size="51"/>
+            <input type="button" name="submitmsg" value="Send" onclick="$.sendEchoMessage();"/>
+        </form>
+        <div id="echoBox">
+            <label for="echoLogId">Echo Box</label><br>
+            <textarea id="echoLogId" rows="16" cols="48" readonly="readonly"></textarea>
+        </div>
+    </body>
+</html>

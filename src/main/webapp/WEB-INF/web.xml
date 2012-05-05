@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+  ~ This file is part of websocktets-gl - simple WebSocket example
+  ~ Copyright (C) 2012  Burt Parkers
+  ~
+  ~ This program is free software: you can redistribute it and/or modify
+  ~ it under the terms of the GNU General Public License as published by
+  ~ the Free Software Foundation, either version 3 of the License, or
+  ~ (at your option) any later version.
+  ~
+  ~ This program is distributed in the hope that it will be useful,
+  ~ but WITHOUT ANY WARRANTY; without even the implied warranty of
+  ~ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  ~ GNU General Public License for more details.
+  ~
+  ~ You should have received a copy of the GNU General Public License
+  ~ along with this program.  If not, see <http://www.gnu.org/licenses/>.
+  -->
+
+<web-app xmlns="http://java.sun.com/xml/ns/j2ee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.4"
+        >
+
+<description>Echo Websocket App</description>
+<display-name>Echo Websocket App</display-name>
+<servlet>
+    <description>EchoWebSockets</description>
+    <servlet-name>WebsocketServlet</servlet-name>
+    <servlet-class>com.github.bpark.WebsocketServlet</servlet-class>
+    <load-on-startup>1</load-on-startup>
+</servlet>
+<servlet-mapping>
+    <servlet-name>WebsocketServlet</servlet-name>
+    <url-pattern>/echo</url-pattern>
+</servlet-mapping>
+<session-config>
+    <session-timeout>25</session-timeout>
+</session-config>
+</web-app>
